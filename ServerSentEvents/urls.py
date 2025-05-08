@@ -23,5 +23,5 @@ from .views import sse_view, index
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('events/', sse_view, name='sse'),
-    path('index/', index, name='index'),
+    path('', index, name='index'),
 ]
