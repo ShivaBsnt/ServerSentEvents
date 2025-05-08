@@ -50,4 +50,4 @@ Server-Sent Events (SSE) enables efficient real-time communication by keeping a 
 - Automatic reconnection in case of a connection failure.
 
 ## 📄 License
-This project is open-source and available under the MIT License.
+This project is open-source and available under the [MIT License](https://github.com/ShivaBsnt/ServerSentEvents/blob/main/LICENSE).
