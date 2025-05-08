@@ -1,0 +1,25 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8" />
+  <title>SSE Demo</title>
+</head>
+<body>
+  <h2>⏱ Server Time:</h2>
+  <div id="output">Waiting for server...</div>
+
+  <script>
+    const source = new EventSource('/events/');
+
+    source.onmessage = function(event) {
+      document.getElementById("output").innerText = event.data;
+    };
+
+    source.onerror = function(err) {
+      document.getElementById("output").innerText = "🔴 Connection lost.";
+      console.error("EventSource failed:", err);
+    };
+  </script>
+</body>
+</html>
